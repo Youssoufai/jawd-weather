@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import SearchBar from './components/SearchBar';
 import WeatherCard from './components/WeatherCard';
 import ForecastCard from './ForecastCard';
+import { Analytics } from "@vercel/analytics/next"
 import {
 	clearErrors,
 	fetchWeatherByCity,
@@ -120,6 +121,7 @@ const App = () => {
 				<ForecastCard forecast={forecastData} unitSymbol={unitSymbol} />
 			)}
 			{forecastError && <div className="error forecast-error">{forecastError}</div>}
+			<Analytics />
 		</div>
 	);
 };
