@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import SearchBar from './components/SearchBar';
 import WeatherCard from './components/WeatherCard';
 import ForecastCard from './ForecastCard';
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/react"
 import {
 	clearErrors,
 	fetchWeatherByCity,
